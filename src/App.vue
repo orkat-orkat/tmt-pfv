@@ -1,12 +1,16 @@
 <script setup>
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
+import TheFooter from './components/Maininout.vue';
+import MainInput from './components/MainInput.vue';
 </script>
 
 <template>
    <div class="wrap">
    <TheHeader />
-    <main class="main">main</main>
+    <main class="main">
+      <MainInput />
+    </main>
     <TheFooter />
    </div>
 </template>
