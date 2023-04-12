@@ -1,18 +1,19 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from './components/TheHeader.vue';
+import TheFooter from './components/TheFooter.vue';
 </script>
 
 <template>
    <div class="wrap">
-    <div>header</div>
+   <TheHeader />
     <main class="main">main</main>
-    <div>footer</div>
+    <TheFooter />
    </div>
 </template>
 
 <style>
+@import 'assets/css/destyle.css;';
+
 .wrap{
   display: flex;
   flex-direction:column;
