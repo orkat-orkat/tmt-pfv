@@ -12,7 +12,7 @@ import TheFooter from './components/TheFooter.vue';
 </template>
 
 <style>
-@import 'assets/css/destyle.css;';
+@import 'assets/css/destyle.css';
 
 .wrap{
   display: flex;
