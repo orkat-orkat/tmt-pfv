@@ -1,8 +1,31 @@
+<script setup>
+
+import {ref} from 'vue';
+const todoRef = ref('');
+const todoListRef = ref([]);
+
+
+//arrow 関数
+const addTodo = () => {
+    // IDをカニ的にミリ秒で、登録する
+    const id = new Date().getTime(); 
+    // 配列に入力TODOを格納
+    todoListRef.value.push({ id: id, task: todoRef.value});
+    // ローカルストレージに登録する
+   localStorage.todoList =JSON.stringify(todoRef.value);
+
+    // 登録後は入力欄を空にする
+    todoRef.value = '';
+};
+</script>
+
 <template>
     <div class="boxInput">
-        <input type="text" class="input" placeholder="memos...">
-        <button class="btn">add</button>
+        <input type="text" class="input" placeholder="memos..." v-model="todoRef">
+        <button class="btn" @click="addTodo">add</button>
     </div>
+
+    {{ todoRef }}
 </template>
 
 <style scoped>
@@ -28,3 +51,4 @@
     font-size:14px;
 }
 </style>
+

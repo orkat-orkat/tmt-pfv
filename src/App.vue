@@ -1,8 +1,7 @@
 <script setup>
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
-import TheFooter from './components/Maininout.vue';
-import MainInput from './components/MainInput.vue';
+import MainInput from './components/MainInput.vue'
 </script>
 
 <template>
