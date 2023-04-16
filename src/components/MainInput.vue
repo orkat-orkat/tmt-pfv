@@ -1,7 +1,11 @@
 <script setup>
 import {ref} from 'vue';
 const todoRef = ref('');
-const todoListRef = ref([]);
+const todoListRef = ref ([
+    {id: 1, task: 'todo1'},
+    {id: 2, task: 'todo2'},
+    {id: 3, task: 'todo3'},
+]);
 
 const addTodo = () => {
      // IDをミリ秒で、登録する
@@ -13,6 +17,7 @@ const addTodo = () => {
     // 登録後は入力欄をからにする
     todoRef.value ='';
 };
+
 </script>
 
 <template>
@@ -72,25 +77,25 @@ const addTodo = () => {
 .todo_list{
     display: flex;
     align-items: center;
-    gap:6px;
+    gap:8px;
 }
 
 .todo{
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 12px;
     width:300px ;
 }
 .check{
     border: 1px solid red;
     transform: scale(1.6);
-    margin: 0 16px 2px 8px;
+    margin: 0 16px 2px 6px;
 }
 .btns{
     display: flex;
     gap: 4px;
 }
 .green{background-color: green;}
-.pink{background-color: pink;}
+.pink{background-color: #ff4081;}
 </style>
 
