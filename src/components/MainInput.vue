@@ -7,9 +7,9 @@ const addTodo = () => {
      // IDをミリ秒で、登録する
     const id = new Date().getTime(); 
     // 配列に入力TODOを格納
-    todoListRef.value.push({ id: id, task: todoRef.value});
+    todoListRef.value.push({ id: id, task: todoRef.value });
     // ローカルストレージに登録する
-    localStorage.todoList = Jaon.stringify(todoListRef.value);
+    localStorage.todoList = JSON.stringify(todoRef.value);
     // 登録後は入力欄をからにする
     todoRef.value ='';
 };
