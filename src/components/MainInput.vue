@@ -1,11 +1,23 @@
 <script setup>
 import {ref} from 'vue';
 const todoRef = ref('');
-const todoListRef = ref ([
-    {id: 1, task: 'todo1'},
-    {id: 2, task: 'todo2'},
-    {id: 3, task: 'todo3'},
-]);
+
+const todoListRef = ref([]);
+const ls = localStorage.todoList;
+todoListRef.value = ls ? JSON.parse(ls) : [];
+
+
+const isEditRef = ref(false); //編集ボタンを押した時にtrueにする
+let editId = -1;
+
+
+
+const showTodo = (id) => {
+    const todo = todoListRef.value.find((todo) => todo.id === id);
+    todoRef.value = todo.task; 
+    isEditRef.value = true;
+    editId = id;
+};
 
 const addTodo = () => {
      // IDをミリ秒で、登録する
@@ -13,9 +25,40 @@ const addTodo = () => {
     // 配列に入力TODOを格納
     todoListRef.value.push({ id: id, task: todoRef.value });
     // ローカルストレージに登録する
-    localStorage.todoList = JSON.stringify(todoRef.value);
-    // 登録後は入力欄をからにする
-    todoRef.value ='';
+    localStorage.todoList = JSON.stringify(todoListRef.value); //todoRefだった
+    // 登録後は入力欄を空にする
+    todoRef.value = '';
+};
+
+//変更ボタンを押した時
+const editTodo = () => {
+    //編集対象となるTODOを取得
+    const todo = todoListRef.value.find((todo) => todo.id === editId);
+    //TODOリストから編集対象のインデックスを取得
+    const idx = todoListRef.value.findIndex((todo) => todo.id === editId);
+    //taskを編集後のTODOで書き換え
+    todo.task = todoRef.value;
+    //splice関数でインデックスを元に対象オブジェクトを書き換え
+    todoListRef.value.splice(idx, 1, todo);
+
+    localStorage.todoList = JSON.stringify(todoListRef.value);
+    isEditRef.value = false; //編集モードを解除
+    editIndex= -1;// IDを初期値に戻す //editIndexから直した
+    todoRef.value = '';
+
+};
+
+//clear sakujo 
+
+const deleteTodo = (id) => {
+    const todo = todoListRef.value.find((todo) => todo.id === id);
+    const idx = todoListRef.value.findIndex((todo) => todo.id === id);
+
+    const delMsg ='[' + todo.task + ']を削除しますか？';
+    if (!confirm(delMsg)) return;
+
+    todoListRef.value.splice(idx, 1);
+    localStorage.todoList = JSON.stringify(todoListRef.value);
 };
 
 </script>
@@ -34,9 +77,10 @@ const addTodo = () => {
             </div>
 
             <div class="btns">
-                <button class="btn green" @click="editTodo" v-if="isEditRef">Edit</button>
-                <button class="btn" @click="addTodo" v-else>Add</button>
-                <button class="btn pink" @click="delwteTodo(todo.id)">Delete</button>
+                <button class="btn green" @click="showTodo(todo.id)">Edit</button>
+                <button class="btn green2" @click="editTodo(todo.id)" v-if="isEditRef">変更</button>
+                <button class="btn pink" @click="deleteTodo(todo.id)" v-else>Delete</button>
+
             </div>
         </div>
     </div>
@@ -96,6 +140,8 @@ const addTodo = () => {
     gap: 4px;
 }
 .green{background-color: green;}
+.green2{background-color: greenyellow; border:1px solid green;}
+
 .pink{background-color: #ff4081;}
 </style>
 
