@@ -143,6 +143,7 @@ const deleteTodo = (id) => {
 }
 .green{background-color: green;}
 .green2{background-color: greenyellow; border:1px solid green;}
+
 .pink{background-color: #ff4081;}
 </style>
 

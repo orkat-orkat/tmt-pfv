@@ -2,21 +2,36 @@
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
 import MainInput from './components/MainInput.vue';
-import Test from './components/Test.vue'
+import Test from './components/Test.vue';
+import Pjt1 from './components/Pjt1.vue';
+import Home from './components/Home.vue';
+import About from './pages/About.vue';
 </script>
 
 <template>
    <div class="wrap">
    <TheHeader />
-    <main class="main">
+  <main class="main">
       <MainInput />
     </main>
     <main class="main">
       <Test />
     </main>
+
+    <main class="main">
+      <About/>
+      <Pjt1/>
+      <Home />
+    </main>
+     <!--- <main class="main">
+      <RouterView />
+    </main> -->
     <TheFooter />
    </div>
+
+ 
 </template>
+
 
 <style>
 @import 'assets/css/destyle.css';

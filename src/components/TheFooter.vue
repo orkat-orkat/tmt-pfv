@@ -1,15 +1,14 @@
 <template>
-    <h1 class="footer">
-     footer da
-    </h1>
-
     <ul class="footer-list">
-    <li>１番目の要素</li>
+    <li>Portfolio</li>
     <li>２番目の要素</li>
     <li>３番目の要素</li> 
     <li class="footer-font">4番目の要素 フォント変えたよ</li>   
     <li class="footer-font2">Contact</li>   
-    </ul>　
+    </ul>
+    <h1 class="footer">
+        <small>Copyright &copy; 2022-2023 Tommy. All Rights Reserved.</small>
+    </h1>
 </template>
 
 <style scoped>
@@ -21,8 +20,9 @@
 ul.footer-list {
     display: flex;
     justify-content: flex-start;
-    width: 100%;
-    padding:2% 10%;
+    width: 80%;
+    padding:2% 0%;
+    border-top:1px solid blue;
 }
 
 ul.footer-list li{
