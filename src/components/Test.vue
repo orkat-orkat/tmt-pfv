@@ -64,27 +64,21 @@ const deleteTodo = (id) => {
 </script>
 
 <template>
-    <div class="boxInput">
-        <input type="text" class="todo_input" v-model="todoRef" placeholder="memos...">
-        <button class="btn" @click="addTodo">add</button>
+  
+
+    <div class="self-wrap">
+        <div class="self-items">1</div>
+        <div class="self-items">2</div>
+        <div class="self-items">3</div>
     </div>
-
-    <div class="box_list" style="border:1px solid blue;">
-        <div class="todo_list" v-for="todo in todoListRef" :key="todo.id">
-            <div class="todo">
-                <input type="checkbox" class="check">
-                <label>{{ todo.task }}</label>
-            </div>
-
-            <div class="btns">
-                <button class="btn green" @click="showTodo(todo.id)">Edit</button>
-                <button class="btn green2" @click="editTodo(todo.id)" v-if="isEditRef">変更</button>
-                <button class="btn pink" @click="deleteTodo(todo.id)" >Delete</button>
-
-            </div>
-        </div>
+    <div class="self-wrap">
+        <div class="self-items">1</div>
+        <div class="self-items">2</div>
+        <div class="self-items">3</div>
+        <div class="self-items">4</div>
+        <div class="self-items">5</div>
     </div>
-
+    
     
 </template>
 
@@ -143,5 +137,22 @@ const deleteTodo = (id) => {
 .green2{background-color: greenyellow; border:1px solid green;}
 
 .pink{background-color: #ff4081;}
+
+
+.self-wrap{
+    display: flex;
+    padding:2% 20%;
+}
+.self-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin:0  8px;
+    width: 400px;
+    background-color: #03a9f4;
+    border-radius: 24px;
+    color: #ccc;
+}
 </style>
 
