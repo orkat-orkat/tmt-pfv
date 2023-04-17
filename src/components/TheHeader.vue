@@ -18,21 +18,21 @@
    text-align: left;
    font-size: 32px;
    font-weight: bold;
-   margin:2% 10%;
+   padding:2% 10%;
 }
 
 ul.heade-list {
     display: flex;
     justify-content: flex-start;
+    width: 100%;
+    padding:2% 10%;
 }
 
 ul.heade-list li{
     margin-right: 10px;
 }
-ul.heade-list li:nth-of-type(1) {
-    margin-left: 0;
-}
-ul.heade-list li:nth-of-type(5) {
+
+ul.heade-list li:nth-of-type(4) {
     margin-left: auto;
     background-color: #ffc;
 }
