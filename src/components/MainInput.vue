@@ -64,12 +64,13 @@ const deleteTodo = (id) => {
 </script>
 
 <template>
+    <div class="contents">
     <div class="boxInput">
         <input type="text" class="todo_input" v-model="todoRef" placeholder="memos...">
         <button class="btn" @click="addTodo">add</button>
     </div>
 
-    <div class="box_list" style="border:1px solid blue;">
+    <div class="box_list" >
         <div class="todo_list" v-for="todo in todoListRef" :key="todo.id">
             <div class="todo">
                 <input type="checkbox" class="check">
@@ -85,7 +86,7 @@ const deleteTodo = (id) => {
         </div>
     </div>
 
-    
+</div>
 </template>
 
 <style scoped>
@@ -116,7 +117,8 @@ const deleteTodo = (id) => {
     flex-direction: column;
     gap: 4px;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    border:1px solid blue;
 }
 .todo_list{
     display: flex;

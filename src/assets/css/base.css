@@ -6,3 +6,8 @@
 #app{
    background:#F5F8FC ; 
 }
+
+.contents{
+    width: 100%;
+    padding:2% 10%;
+}

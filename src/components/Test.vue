@@ -4,12 +4,14 @@ import {ref} from 'vue';
 
 <template>
   
-
+    <div class="contents">
+    <h4 class="subtitle1">test</h4>
     <div class="self-wrap">
         <div class="self-items">1</div>
         <div class="self-items">2</div>
         <div class="self-items">3</div>
     </div>
+    <h4 class="subtitle2">test</h4>
     <div class="self-wrap">
         <div class="self-items">1</div>
         <div class="self-items">2</div>
@@ -17,76 +19,65 @@ import {ref} from 'vue';
         <div class="self-items">4</div>
         <div class="self-items">5</div>
     </div>
+
+    <h4 class="subtitle1">test3</h4>
+    <div class="self-wrap">
+        <div class="self-items2">1</div>
+        <div class="self-items3">2</div>
+    </div>
     
+    <h4 class="subtitle1">test4</h4>
+    <div class="self-wrap">
+        <div class="self-items2">4</div>
+        <div class="self-items3">5</div>
+    </div>
+
+    </div><!-- contents-->
     
 </template>
 
 <style scoped>
-.boxInput{
-    margin-top: 20px;
+.subtitle1, .subtitle2{
+    font-size: 2em;
+    color:blue;
+    text-align: left;
+    margin:16px;
+    font-weight: bold;
+    border-bottom: 1px solid #aaa;
 }
-
-.todo_input{
-   width: 300px;
-   margin-right: 8px;
-   padding: 8px;
-   font-size: 18px;
-   border: 1px solid #aaa;
-   border-radius: 6px;
-}
-
-.btn{
-    padding: 8px;
-    background-color: #03a9f4;
-    border-radius:6px;
-    color: #fff;
-    text-align: center;
-    font-size:14px;
-}
-.box_list{
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
-    gap: 4px;
-    align-items: center;
-    justify-content: center
-}
-.todo_list{
-    display: flex;
-    align-items: center;
-    gap:8px;
-}
-
-.todo{
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 12px;
-    width:300px ;
-}
-.check{
-    border: 1px solid red;
-    transform: scale(1.6);
-    margin: 0 16px 2px 6px;
-}
-.btns{
-    display: flex;
-    gap: 4px;
-}
-.green{background-color: green;}
-.green2{background-color: greenyellow; border:1px solid green;}
-
-.pink{background-color: #ff4081;}
-
-
 .self-wrap{
     display: flex;
-    padding:2% 10%;
+    padding:50px 0;
 }
 .self-items{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
+    margin:0  8px;
+    width: 400px;
+    background-color: #03a9f4;
+    border-radius: 24px;
+    color: #ccc;
+}
+
+.self-items2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin:0  8px;
+    width: 800px;
+    background-color: #03a9f4;
+    border-radius: 24px;
+    color: #ccc;
+}
+
+.self-items3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
     margin:0  8px;
     width: 400px;
     background-color: #03a9f4;
