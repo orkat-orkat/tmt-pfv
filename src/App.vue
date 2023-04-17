@@ -1,7 +1,8 @@
 <script setup>
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
-import MainInput from './components/MainInput.vue'
+import MainInput from './components/MainInput.vue';
+import Test from './components/Test.vue'
 </script>
 
 <template>
@@ -10,13 +11,16 @@ import MainInput from './components/MainInput.vue'
     <main class="main">
       <MainInput />
     </main>
+    <main class="main">
+      <Test />
+    </main>
     <TheFooter />
    </div>
 </template>
 
 <style>
 @import 'assets/css/destyle.css';
-
+@import 'assets/css/base.css';
 .wrap{
   display: flex;
   flex-direction:column;
@@ -37,6 +41,5 @@ import MainInput from './components/MainInput.vue'
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

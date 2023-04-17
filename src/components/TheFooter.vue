@@ -1,6 +1,6 @@
 <template>
     <h1 class="footer">
-     footer dayo
+     footer da
     </h1>
 </template>
 
