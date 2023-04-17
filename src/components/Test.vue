@@ -83,35 +83,7 @@ const deleteTodo = (id) => {
 </template>
 
 <style scoped>
-.boxInput{
-    margin-top: 20px;
-}
 
-.todo_input{
-   width: 300px;
-   margin-right: 8px;
-   padding: 8px;
-   font-size: 18px;
-   border: 1px solid #aaa;
-   border-radius: 6px;
-}
-
-.btn{
-    padding: 8px;
-    background-color: #03a9f4;
-    border-radius:6px;
-    color: #fff;
-    text-align: center;
-    font-size:14px;
-}
-.box_list{
-    margin-top: 20px;
-    display:flex;
-    flex-direction: column;
-    gap: 4px;
-    align-items: center;
-    justify-content: center
-}
 .todo_list{
     display: flex;
     align-items: center;
