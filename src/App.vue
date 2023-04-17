@@ -1,10 +1,7 @@
 <script setup>
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
-import MainInput from './components/MainInput.vue';
-import Test from './components/Test.vue';
-
-library.add(faLeaf)
+import MainInput from './components/MainInput.vue'
 </script>
 
 <template>
@@ -13,17 +10,12 @@ library.add(faLeaf)
     <main class="main">
       <MainInput />
     </main>
-
-    <main>
-      <Test />
-    </main>
     <TheFooter />
    </div>
 </template>
 
 <style>
 @import 'assets/css/destyle.css';
-@import 'assets/css/base.css';
 
 .wrap{
   display: flex;
@@ -33,7 +25,6 @@ library.add(faLeaf)
   widows: 480px;
   margin: 0 auto;
   font-family: sans-serif;
-  background: #F5F8FC;
 }
 
 .main{
@@ -46,5 +37,6 @@ library.add(faLeaf)
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-top: 60px;
 }
 </style>

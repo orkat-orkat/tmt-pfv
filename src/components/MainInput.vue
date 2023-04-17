@@ -79,7 +79,7 @@ const deleteTodo = (id) => {
             <div class="btns">
                 <button class="btn green" @click="showTodo(todo.id)">Edit</button>
                 <button class="btn green2" @click="editTodo(todo.id)" v-if="isEditRef">変更</button>
-                <button class="btn pink" @click="deleteTodo(todo.id)" >Delete</button>
+                <button class="btn pink" @click="deleteTodo(todo.id)" v-else>Delete</button>
 
             </div>
         </div>
