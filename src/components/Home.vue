@@ -1,7 +1,7 @@
 <template>
     <div>
-      <h2>テストページ1</h2>
-      <button @click="About">next</button>
+      <h2>Homeのぺーじ</h2>
+      <button @click="About">Aboutにいきたい</button>
     </div>
   </template>
   <script>

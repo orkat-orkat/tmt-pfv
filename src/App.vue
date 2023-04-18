@@ -8,6 +8,13 @@ import Home from './components/Home.vue';
 import About from './pages/About.vue';
 </script>
 
+<script>
+export default {
+  name: 'App'
+}
+
+</script>
+
 <template>
    <div class="wrap">
    <TheHeader />
@@ -23,10 +30,9 @@ import About from './pages/About.vue';
       <Pjt1/>
       <Home />
     </main>
-     <!--- <main class="main">
-      <RouterView />
-    </main> -->
+   
     <TheFooter />
+    <RouterView />
    </div>
 
  
